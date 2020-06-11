@@ -1,4 +1,4 @@
-# lastfm_user_data
+# Last.fm user data API
 
 Simple python script which pulls down user data from last.fm
 
