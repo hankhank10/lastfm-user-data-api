@@ -6,7 +6,7 @@ This information is publicly available for all users so there is no need to be l
 
 ## Usage
 
-Clone the repositary.
+Clone or download lastfm_user_data.py into your project folder.
 
 Add the following to the start of your script
 
