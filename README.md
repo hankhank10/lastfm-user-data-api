@@ -10,7 +10,7 @@ Clone the repositary.
 
 Add the following to the start of your script
 
-```include lastfm_user_data.py```
+```include lastfm_user_data```
 
 Then use the following command in your script to pull the data
 
