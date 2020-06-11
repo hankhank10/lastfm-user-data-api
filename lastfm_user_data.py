@@ -39,14 +39,26 @@ def playcount(lastfm_username, period):
         start_time = time_now.replace(hour=0, minute=0)
         start_time = start_time - timedelta(days=start_time.weekday())
 
+    if period == "last30days":
+        start_time = time_now.replace(hour=0, minute=0)
+        start_time = start_time - timedelta(days=30)
+    
+    if period == "last7days":
+        start_time = time_now.replace(hour=0, minute=0)
+        start_time = start_time - timedelta(days=7)
+
+    if period == "last24hours":
+        start_time = time_now - timedelta(hours=24)
+    
+    if period == "last_hour":
+        start_time = time_now - timedelta(hours=1)
+
     # if start_time has been set then append it to the url
     if start_time is not None:
-        #print (start_time)
         start_timestamp = datetime.timestamp(start_time)
 
         # convert to integer
         start_timestamp = int(start_timestamp)
-        #print (start_time)
 
         url = url + "&from=" + str(start_timestamp)
 
