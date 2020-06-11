@@ -29,6 +29,10 @@ lastfm_user_data.playcount(requested_username, "this_year")
 lastfm_user_data.playcount(requested_username, "this_month")
 lastfm_user_data.playcount(requested_username, "this_week")
 lastfm_user_data.playcount(requested_username, "today")
+lastfm_user_data.playcount(requested_username, "last30days")
+lastfm_user_data.playcount(requested_username, "last7days")
+lastfm_user_data.playcount(requested_username, "last24hours")
+lastfm_user_data.playcount(requested_username, "last_hour")
 ```
 
 ## Return last track played
