@@ -1,9 +1,16 @@
 import lastfm_user_data
+import sys
 
-# ask user to input a username
-requested_username = input ("Enter a last.fm username to check the playcount of >>>  ")
+# check if a command line argument has been passed
+if len(sys.argv) == 2:
+    # if it has then set the requested username to that
+    requested_username = str(sys.argv[1])
 
-# check that username
+if len(sys.argv) == 1:
+    #if not then ask the user to input a username
+    requested_username = input ("Enter a last.fm username to check the playcount of >>>  ")
+
+# use the function to gather and print data for that username
 print ()
 print ("Gathering data for user " + requested_username + " with URL: " + lastfm_user_data.static_data(requested_username, "url"))
 print ()
@@ -19,3 +26,4 @@ lastplayed_track, lastplayed_artist, lastplayed_album, lastplayed_image = lastfm
 
 print (lastplayed_track + " by " + lastplayed_artist + " from  " + lastplayed_album)
 print (lastplayed_image)
+print ()
