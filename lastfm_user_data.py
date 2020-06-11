@@ -19,10 +19,3 @@ def check_data(lastfm_username, json_field):
     output = obj['user'][json_field]
 
     return output
-
-# ask user to input a username
-requested_username = input ("Enter a last.fm username to check the playcount of >>>  ")
-
-# check that username
-playcount = check_data(requested_username, "playcount")
-print ("Last.fm user " + requested_username + " has played " + playcount + " tracks")
